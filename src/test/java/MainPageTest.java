@@ -5,13 +5,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class MainPageTest {
-
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.browserSize = "1920x1080";
-        sleep(1000);
-    }
+public class MainPageTest extends TestBase{
 
     @Test
     void checkButtonsOnMainPage() {
