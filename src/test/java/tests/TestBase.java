@@ -15,6 +15,8 @@ public class TestBase {
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
+        Configuration.remote = System.getProperty("remoteServer");
+
         Configuration.browserSize = "1920x1080";
         sleep(1000);
 
