@@ -1,11 +1,11 @@
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
+package tests;
+
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class MainPageTest extends TestBase{
+public class MainPageTest extends TestBase {
 
     @Test
     void checkButtonsOnMainPage() {
