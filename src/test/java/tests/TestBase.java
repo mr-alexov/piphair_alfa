@@ -18,6 +18,7 @@ public class TestBase {
         Configuration.remote = System.getProperty("remoteServer");
 
         Configuration.browserSize = "1920x1080";
+        Configuration.timeout = 7000;
         sleep(1000);
 
     }
