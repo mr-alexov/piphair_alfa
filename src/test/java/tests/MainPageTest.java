@@ -41,4 +41,34 @@ public class MainPageTest extends TestBase {
         $("[class*='pricelist-item__title']").parent().$("[class*='pricelist-item__price']").shouldHave(text("00₽"));
 
     }
+
+    @Test
+    void checkingOrdering() {
+        open("https://piphair.ru/");
+
+        // Ждем кнопку записаться на услуги.
+        $x("//a[contains(text(),'ЗАПИСАТЬСЯ НА УСЛУГИ')]").shouldBe(interactable);
+
+        // Нажимаем её.
+        $x("//a[contains(text(),'ЗАПИСАТЬСЯ НА УСЛУГИ')]").click();
+
+        // Ждём появления стрелочек которые разворачивают выбор
+        $("ui-kit-svg-icon[name='arrow-down-light']").shouldBe(interactable);
+
+        // Нажимаем первую стрелочку
+        $("ui-kit-svg-icon[name='arrow-down-light']").click();
+
+        // Кликаем первый чекбокс.
+        $("input[type='checkbox']").click();
+
+        // Кнопка продолжить должна быть доступна для действий
+        $("button.full-width").shouldBe(interactable);
+
+        // Жмем на кнопку Продолжить
+        $("button.full-width").click();
+
+        // Должны быть доступны дни для записи.
+        $("div.current-week[data-locator='working_day']  div span[data-locator='working_day_number']").shouldBe(interactable);
+
+    }
 }
