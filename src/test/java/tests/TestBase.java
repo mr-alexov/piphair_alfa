@@ -10,6 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class TestBase {
@@ -61,6 +62,8 @@ public class TestBase {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        closeWebDriver();
 
     }
 
