@@ -22,7 +22,7 @@ public class TestBase {
         Configuration.remote = System.getProperty("remoteServer");
 
         Configuration.browserSize = "1920x1080";
-        Configuration.timeout = 7000;
+        Configuration.timeout = 10000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
